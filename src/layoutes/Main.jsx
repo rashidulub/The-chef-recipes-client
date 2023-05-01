@@ -11,14 +11,14 @@ const Main = () => {
             <Header></Header>
             <Container>
                 <Row>
-                    <Col lg={3}>
+                    <Col lg={2}>
                         <LeftNav></LeftNav>
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={8}>
 
                         <h3>home page comming</h3>
                     </Col>
-                    <Col lg={3}>
+                    <Col lg={2}>
                         <RightNav></RightNav>
                     </Col>
                 </Row>
