@@ -2,7 +2,7 @@ import React from 'react';
 
 const VewRecipe = () => {
     return (
-        <div>
+        <div className='w-75 mx-auto'>
             <h1>VewRecipe comming</h1>
             
         </div>

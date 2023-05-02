@@ -14,6 +14,7 @@ const VewRecipesLayoutes = () => {
         <Container  className='mt-5'>
             <NavigationBar></NavigationBar>
             <Outlet></Outlet>
+            
             <Footer></Footer>
         </Container>
     );
