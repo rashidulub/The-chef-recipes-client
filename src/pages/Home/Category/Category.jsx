@@ -6,8 +6,8 @@ const Category = () => {
     const {id} = useParams();
     const categoriChef = useLoaderData()
     return (
-        <div>
-            <h2>this is a Category: {categoriChef.length}</h2>
+        <div className='mt-5'>
+           
             {
                 categoriChef.map(chef=>
                     <ChefCard

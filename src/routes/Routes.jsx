@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path:'vew',
+        path:'view',
         element:<VewRecipesLayoutes></VewRecipesLayoutes>,
         children:[
             {
