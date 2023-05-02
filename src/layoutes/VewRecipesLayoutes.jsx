@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '../pages/shared/Header/Header';
 import Footer from '../pages/shared/Footer/Footer';
@@ -6,7 +7,8 @@ import LeftNav from '../pages/shared/LeftNav/LeftNav';
 import RightNav from '../pages/shared/RightNav/RightNav';
 import { Outlet } from 'react-router-dom';
 
-const Main = () => {
+
+const VewRecipesLayoutes = () => {
     return (
         <div>
             <Header></Header>
@@ -25,9 +27,8 @@ const Main = () => {
                 </Row>
             </Container>
             <Footer></Footer>
-
         </div>
     );
 };
 
-export default Main;
+export default VewRecipesLayoutes;
