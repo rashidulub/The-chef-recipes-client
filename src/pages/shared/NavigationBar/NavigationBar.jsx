@@ -30,16 +30,16 @@ const NavigationBar = () => {
                          to='/category/0'
                          aria-label='Home'
                          title='Home'
-                         className={({ isActive }) => (isActive ? 'active' : 'default')}
+                         className={({ isActive }) => (isActive ? ' active fs-5 text-decoration-none' : 'default fs-5 text-secondary')}
                         > Home</NavLink>
                     </li>
-                    <li>
+                    <li >
                         <NavLink 
                          to='/blog'
                          aria-label='Statistics'
                          title='Statistics'
-                         className={({ isActive }) => (isActive ? 'active' : 'default')}
-                        >blog</NavLink>
+                         className= {({ isActive }) => (isActive ? 'active fs-5 text-decoration-none ' : 'default fs-5 text-decoration-none text-secondary')}
+                        >Blog</NavLink>
                     </li>    
                          
                             
