@@ -6,7 +6,7 @@ import {  FaHatCowboy,FaHandPointRight, FaRegHandPointRight } from 'react-icons/
 const ChefCard = ({chef}) => {
     const { _id, title, recipe,experience, like,details, image_url, author, total_view, rating } = chef
     return (
-        <Card className="mb-5">
+        <Card className="mb-5 p-5">
         <Card.Header>
            <div className="d-flex justify-content-between align-items-center">
            <h4 className='text-primary'>{author?.name}</h4>
@@ -15,7 +15,7 @@ const ChefCard = ({chef}) => {
         </Card.Header>
         <Card.Body>
           <Card.Title>{title}</Card.Title>
-          <Card.Img variant="top" src={image_url} />
+          <Card.Img variant="top"  style={{height:'300px'}} src={image_url} />
           <Card.Text>
             
           </Card.Text>
@@ -31,8 +31,9 @@ const ChefCard = ({chef}) => {
         <h6 className='text-danger'> <FaRegHandPointRight ></FaRegHandPointRight>  {like}</h6> 
 
         </div>
+        <Link className='text-decoration-none text-white ' to={`/view/${_id}`}><Button className='w-100 mb-0  ' variant="success">Vew Recipes..</Button></Link>
         
-        <Button className='w-100 mb-0  ' variant="success"><Link className='text-decoration-none text-white ' to={`/view/${_id}`}>Vew Recipes..</Link></Button>
+        
         </Card.Footer>
     
       </Card>
