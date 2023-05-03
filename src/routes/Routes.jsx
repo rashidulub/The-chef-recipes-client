@@ -7,6 +7,7 @@ import VewRecipe from "../pages/VewRecipe/VewRecipe/VewRecipe";
 import LoginLayouts from "../layoutes/LoginLayouts";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
     },
     {
         path:'view',
-        element:<VewRecipesLayoutes></VewRecipesLayoutes>,
+        element:<PrivateRoutes><VewRecipesLayoutes></VewRecipesLayoutes></PrivateRoutes>,
         children:[
             {
                 path:':id',
