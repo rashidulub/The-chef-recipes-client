@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { FaCaretSquareDown, FaUserCircle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const NavigationBar = () => {
@@ -24,12 +24,26 @@ const NavigationBar = () => {
                     <h3>CookPaal</h3>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         
-                        <Nav className="mx-auto align-items-center">
-                          
-                                <Link to='/category/0'>Home</Link>
+                        <Nav className="mx-auto align-items-center gap-2">
+                        <li>
+                        <NavLink 
+                         to='/category/0'
+                         aria-label='Home'
+                         title='Home'
+                         className={({ isActive }) => (isActive ? 'active' : 'default')}
+                        > Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink 
+                         to='/blog'
+                         aria-label='Statistics'
+                         title='Statistics'
+                         className={({ isActive }) => (isActive ? 'active' : 'default')}
+                        >blog</NavLink>
+                    </li>    
                          
-                            <Nav.Link href="#pricing">About</Nav.Link>
-                            <Nav.Link href="#pricing">Blog</Nav.Link>
+                            
+                            
                         </Nav>
                         <Nav>
                           

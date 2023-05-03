@@ -8,11 +8,14 @@ import LoginLayouts from "../layoutes/LoginLayouts";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Blog from "../pages/Blog/Blog";
 
 const router = createBrowserRouter([
     {
         path:'/',
         element:<LoginLayouts></LoginLayouts>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',
@@ -27,12 +30,23 @@ const router = createBrowserRouter([
                 path:'register',
                 element:<Register></Register>
             }
+            ,{
+                path:'/error',
+                element:<ErrorPage></ErrorPage>
+
+            },
+            {
+                path:'/blog',
+                element:<Blog></Blog>
+            }
+
         ]
 
     },
     {
         path:'category',
         element:<Main></Main>,
+        
         children:[
             
             {
