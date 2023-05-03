@@ -1,10 +1,13 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Register = () => {
+
+    const [error, setError] = useState('')
     const {createUser}= useContext(AuthContext);
+    
 
     const handleRegister = event=>{
         event.preventDefault();
@@ -20,10 +23,12 @@ const Register = () => {
         .then(result =>{
             const createdUser = result.user;
             console.log(createdUser);
+            setError('')
         })
 
         .catch(error=>{
-            console.log(error);
+            console.error(error.message)
+            setError(error.message);
         }) 
     }
 
@@ -51,7 +56,7 @@ const Register = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" name='password' placeholder="Password" required/>
             </Form.Group>
-            
+            <p className='text-danger'>{error}</p>
             <Button className='w-100' variant="primary" type="submit">
                 Register
             </Button>
@@ -63,7 +68,7 @@ const Register = () => {
 
             </Form.Text>
         </Form>
-
+       
     </Container>
     );
 };
