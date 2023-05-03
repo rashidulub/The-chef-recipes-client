@@ -51,13 +51,7 @@ const Register = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" name='password' placeholder="Password" required/>
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check 
-               
-                type="checkbox" 
-                name='accept' 
-                label={<>Accept <Link className='text-decoration-none ' to='/trems'>Trams And Condition</Link></>} />
-            </Form.Group>
+            
             <Button className='w-100' variant="primary" type="submit">
                 Register
             </Button>
