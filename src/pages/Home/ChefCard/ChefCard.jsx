@@ -6,7 +6,7 @@ import {  FaHatCowboy,FaHandPointRight, FaRegHandPointRight } from 'react-icons/
 const ChefCard = ({chef}) => {
     const { _id, title, recipe,experience, like,details, image_url, author, total_view, rating } = chef
     return (
-        <Card className="mb-5 p-5">
+        <Card className="mb-5 ">
         <Card.Header>
            <div className="d-flex justify-content-between align-items-center">
            <h4 className='text-primary'>{author?.name}</h4>

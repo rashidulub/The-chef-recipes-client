@@ -3,10 +3,17 @@ import { Card, Col, Row } from 'react-bootstrap';
 import { FaHeart, FaRegHeart, FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useLoaderData } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Recipes = () => {
     const chef = useLoaderData();
     const { recipes_img, recipes, rating, cook } = chef
+
+    const handleFavorite =()=>{
+        toast("Added To Favorite");
+    }
     return (
         <div className='mt-5 '>
             <h3 className='text-danger'>Recipes And How to Cook</h3>
@@ -38,7 +45,7 @@ const Recipes = () => {
                                 <span className='ml-5'>{rating?.number}</span>
                             </div >
                            
-                            <div >
+                            <div onClick={handleFavorite} >
                             <FaHeart  className='text-danger'></FaHeart>
 
                             </div>
@@ -72,7 +79,7 @@ const Recipes = () => {
                                 <span className='ml-5'>{rating?.number}</span>
                             </div >
                            
-                            <div >
+                            <div onClick={handleFavorite}>
                             <FaHeart  className='text-danger'></FaHeart>
 
                             </div>
@@ -105,7 +112,7 @@ const Recipes = () => {
                                 <span className='ml-5'>{rating?.number}</span>
                             </div >
                            
-                            <div >
+                            <div onClick={handleFavorite} >
                             <FaHeart  className='text-danger'></FaHeart>
 
                             </div>
@@ -138,8 +145,8 @@ const Recipes = () => {
                                 <span className='ml-5'>{rating?.number}</span>
                             </div >
                            
-                            <div >
-                            <FaHeart  className='text-danger'></FaHeart>
+                            <div onClick={handleFavorite} >
+                            <FaHeart className='text-danger'></FaHeart>
 
                             </div>
                         </Card.Footer>
@@ -149,7 +156,7 @@ const Recipes = () => {
 
 
             </Row>
-
+            
         </div>
     );
 };

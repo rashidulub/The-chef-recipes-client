@@ -2,6 +2,8 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { useActionData, useLoaderData } from 'react-router-dom';
 import Recipes from '../../shared/Recipes/Recipes';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const VewRecipe = () => {
     const chef = useLoaderData();
@@ -32,6 +34,7 @@ const VewRecipe = () => {
     </Card>
             
             <Recipes></Recipes>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
