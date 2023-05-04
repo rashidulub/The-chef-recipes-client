@@ -33,13 +33,13 @@ const ErrorPage = () => {
           ></polygon>
         </svg>
         <div className='max-w-md text-center'>
-          <h2 className='mb-8 font-extrabold text-9xl text-gray-600'>
-            <span className='sr-only'>Error</span> {status || 404}
+          <h2 className='mb-8 font-extrabold text-info fs-1'>
+            <span className='sr-only '>Error</span> {status || 404}
           </h2>
-          <p className='text-2xl font-semibold md:text-3xl mb-8'>
+          <p className='fs-2 text-dark'>
             {error?.message}
           </p>
-          <Link style={{border:'5px solid gray ', padding:'5px' ,background:'white' } }
+          <Link className='text-decoration-none fs-2' style={{border:'5px solid gray ', padding:'5px' ,background:'gray' , fontSize:'25px' , fontWeight:'700' } }
             to='/'
             
           >

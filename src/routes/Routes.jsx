@@ -52,7 +52,7 @@ const router = createBrowserRouter([
             {
                 path:':id',
                 element:<Category></Category>,
-                loader: ({params})=> fetch(`http://localhost:5000/categories/${params.id}`)
+                loader: ({params})=> fetch(`https://the-chef-recipes-server-rashidulub.vercel.app/categories/${params.id}`)
             }
         ]
     },
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
             {
                 path:':id',
                 element:<VewRecipe></VewRecipe>,
-                loader:({params})=> fetch(`http://localhost:5000/chef/${params.id}`)
+                loader:({params})=> fetch(`https://the-chef-recipes-server-rashidulub.vercel.app/chef/${params.id}`)
 
 
             }
